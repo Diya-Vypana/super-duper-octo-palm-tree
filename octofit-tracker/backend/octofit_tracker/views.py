@@ -9,13 +9,21 @@ def api_root(request, format=None):
     if request.method == 'POST':
         return Response({"message": "POST request received"}, status=status.HTTP_201_CREATED)
 
-    base_url = 'http://[REPLACE-THIS-WITH-YOUR-CODESPACE-NAME]-8000.app.github.dev/'
+    codespace_url = 'https://fictional-barnacle-69gvx7v7jgvp3x7p-8000.app.github.dev/'
+    localhost_url = 'http://localhost:8000/'
+    # Note: Codespace URL uses HTTPS and may show a certificate warning. Accept the warning to proceed.
     return Response({
-        'users': base_url + 'api/users/?format=api',
-        'teams': base_url + 'api/teams/?format=api',
-        'activities': base_url + 'api/activities/?format=api',
-        'leaderboard': base_url + 'api/leaderboard/?format=api',
-        'workouts': base_url + 'api/workouts/?format=api'
+        'users (codespace)': codespace_url + 'api/users/?format=api',
+        'users (localhost)': localhost_url + 'api/users/?format=api',
+        'teams (codespace)': codespace_url + 'api/teams/?format=api',
+        'teams (localhost)': localhost_url + 'api/teams/?format=api',
+        'activities (codespace)': codespace_url + 'api/activities/?format=api',
+        'activities (localhost)': localhost_url + 'api/activities/?format=api',
+        'leaderboard (codespace)': codespace_url + 'api/leaderboard/?format=api',
+        'leaderboard (localhost)': localhost_url + 'api/leaderboard/?format=api',
+        'workouts (codespace)': codespace_url + 'api/workouts/?format=api',
+        'workouts (localhost)': localhost_url + 'api/workouts/?format=api',
+        'note': 'Codespace URL uses HTTPS and may show a certificate warning. Accept the warning to proceed.'
     })
 
 class UserViewSet(viewsets.ModelViewSet):
