@@ -1,0 +1,162 @@
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #e6e6fa 0%, #d1c4e9 100%);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Navigation styles */
+nav.navbar {
+  background: linear-gradient(90deg, #b39ddb 0%, #9575cd 100%);
+  box-shadow: 0 4px 12px rgba(149, 117, 205, 0.15);
+  padding: 1rem 2rem;
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+.navbar-brand img {
+  height: 40px;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+  color: #ede7f6 !important;
+  text-decoration: underline;
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+  color: #6a1b9a;
+  font-family: 'Roboto Slab', serif;
+  margin-bottom: 1rem;
+}
+
+/* Table styles */
+table {
+  width: 90%;
+  margin: 1.5rem auto;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(106, 27, 154, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+table th, table td {
+  border: 1px solid #d1c4e9;
+  padding: 1rem;
+  text-align: left;
+  font-size: 1.05rem;
+}
+
+table th {
+  background: linear-gradient(90deg, #b39ddb 0%, #9575cd 100%);
+  color: #fff;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+}
+
+table tr:nth-child(even) {
+  background-color: #f3e5f5;
+}
+
+table tr:hover {
+  background-color: #ede7f6;
+}
+
+/* List styles */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  color: #6a1b9a;
+  background: #fff;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(149, 117, 205, 0.08);
+  font-size: 1.1rem;
+}
+
+/* Text styles */
+.component-text {
+  color: #7c43bd;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-family: 'Roboto Slab', serif;
+}
+
+/* Button styles */
+button, .btn, .btn-primary {
+  background: linear-gradient(90deg, #9575cd 0%, #7e57c2 100%);
+  color: #fff !important;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(149, 117, 205, 0.10);
+  transition: background 0.2s;
+}
+
+button:hover, .btn:hover, .btn-primary:hover {
+  background: linear-gradient(90deg, #7e57c2 0%, #9575cd 100%);
+}
+
+/* Logo styles */
+.octofit-logo {
+  height: 40px;
+  margin-right: 14px;
+  vertical-align: middle;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(149, 117, 205, 0.15);
+}
+
+/* Favicon styles (for completeness, but actual favicon is set in public/index.html) */
+.app-favicon {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* Misc */
+.App-link {
+  color: #7c43bd;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.App-link:hover {
+  color: #6a1b9a;
+}
+
+@media (max-width: 600px) {
+  .navbar-brand, .navbar-nav .nav-link {
+    font-size: 1rem;
+  }
+  table th, table td {
+    padding: 0.5rem;
+    font-size: 0.95rem;
+  }
+  .octofit-logo {
+    height: 32px;
+  }
+}
